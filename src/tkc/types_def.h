@@ -32,6 +32,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include "esp_log.h"
 
 #if defined(HAS_STDIO) || defined(AWTK_WEB)
 #include <stdio.h>
@@ -210,10 +211,10 @@ typedef enum _ret_t {
 #define log_warn(format, args...) printf(format, ##args)
 #define log_error(format, args...) printf(format, ##args)
 #else
-#define log_debug(format, args...)
-#define log_info(format, args...)
-#define log_warn(format, args...)
-#define log_error(format, args...)
+#define log_debug(format, ...) ESP_LOGD("ATWK", format, ##__VA_ARGS__)
+#define log_info(format, ...) ESP_LOGI("ATWK", format, ##__VA_ARGS__)
+#define log_warn(format, ...) ESP_LOGW("ATWK", format, ##__VA_ARGS__)
+#define log_error(format, ...) ESP_LOGE("ATWK", format, ##__VA_ARGS__)
 #endif
 
 #if defined(WIN32) || defined(__ARMCC_VERSION)

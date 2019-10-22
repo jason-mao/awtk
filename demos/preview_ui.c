@@ -26,6 +26,8 @@
 #include "base/timer.h"
 #include "assets.h"
 #include "tkc/utf8.h"
+#include "stdio.h"
+#include "ext_widgets.h"
 
 #include "ui_loader/ui_loader_xml.h"
 #include "ui_loader/ui_loader_default.h"

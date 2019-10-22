@@ -3,6 +3,10 @@
 #ifndef WITH_FS_RES
 #include "assets/default/inc/fonts/default.data"
 #include "assets/default/inc/images/bricks.data"
+#include "assets/default/inc/ui/basic.data"
+#include "assets/default/inc/images/1.data"
+#include "assets/default/inc/images/2.data"
+#include "assets/default/inc/images/3.data"
 #include "assets/default/inc/images/checked.data"
 #include "assets/default/inc/images/dialog_title.data"
 #include "assets/default/inc/images/earth.data"
@@ -45,6 +49,10 @@ ret_t assets_init(void) {
 #else
   assets_manager_add(am, font_default);
   assets_manager_add(am, image_bricks);
+  assets_manager_add(am, image_1);
+  assets_manager_add(am, image_2);
+  assets_manager_add(am, image_3);
+  assets_manager_add(am, ui_basic);
   assets_manager_add(am, image_checked);
   assets_manager_add(am, image_dialog_title);
   assets_manager_add(am, image_earth);
